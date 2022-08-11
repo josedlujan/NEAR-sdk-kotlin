@@ -48,6 +48,7 @@ dependencies {
     //implementation project(path: ':knear-sdk')
  //   implementation 'com.github.josedlujan:NEAR-sdk-kotlin:1.0.0'
     implementation project(path: ':knear-sdk')
+    implementation 'com.github.josedlujan:NEAR-sdk-kotlin:1.0.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
