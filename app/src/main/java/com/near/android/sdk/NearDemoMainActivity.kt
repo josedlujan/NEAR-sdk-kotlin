@@ -6,6 +6,7 @@ import android.util.Log
 import com.knear.android.service.MethodUtils.Companion.getDecodedAsciiValue
 import com.knear.android.service.NearMainService
 import com.jose.lujan.near.android.sdk.R
+import com.knear.android.NearService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -13,7 +14,6 @@ import kotlinx.coroutines.withContext
 import java.util.*
 
 class NearDemoMainActivity : AppCompatActivity() {
-
     private var loginFragment: LoginFragment = LoginFragment.getInstance()
     private var transactionFragment: TransactionFragment = TransactionFragment.getInstance()
     private lateinit var nearMainService: NearMainService
@@ -24,6 +24,8 @@ class NearDemoMainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().add(R.id.demo_fragment_container, loginFragment).commit()
         nearMainService = NearMainService(this)
     }
+
+
 
     fun login(email:String){
         nearMainService.login(email)
